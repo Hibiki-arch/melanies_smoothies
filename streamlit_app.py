@@ -14,7 +14,7 @@ st.write(
 )
 
 # ↓テーブル表示
-session = st.session_state();
+session = get_active_session();
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 

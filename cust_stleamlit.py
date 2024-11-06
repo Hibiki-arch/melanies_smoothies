@@ -76,8 +76,3 @@ time_to_insert = st.button('反映')
 if time_to_insert:
     session.sql(my_insert_stmt).collect()
     st.success('注文したよん!', icon="✅");
-
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon");
-st.write(fruityvice_response.json())
-
-# fv_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)

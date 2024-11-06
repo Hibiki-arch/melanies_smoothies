@@ -1,5 +1,6 @@
 # Import python packages
 import streamlit as st
+from snowflake.snowpark.context import get_actice_session
 from snowflake.snowpark.functions import col,when_matched
 
 cnx = st.connection("snowflake")
@@ -14,7 +15,7 @@ st.write(
 )
 
 # ↓テーブル表示
-session = st.session_state.window_open;
+session = get_active_session();
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 

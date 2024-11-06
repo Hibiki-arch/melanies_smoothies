@@ -37,8 +37,7 @@ st.write("The name on your smoothie will be", name_on_order)
 # ↓テーブル内のカテゴリの複数選択
 ingredients_list = st.multiselect(
     'Choose up to 5 ingredients:',
-    my_dataframe,
-    max_selection=5
+    my_dataframe
 )
 
 # ↓表示のラインを整える＝if ingredients_list is not null : then do everything below this line is indented

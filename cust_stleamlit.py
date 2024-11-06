@@ -73,4 +73,8 @@ st.write(my_insert_stmt)
 time_to_insert = st.button('反映')
 if time_to_insert:
     session.sql(my_insert_stmt).collect()
-    st.success('注文したよん!', icon="✅")
+    st.success('注文したよん!', icon="✅");
+
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
